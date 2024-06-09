@@ -17,18 +17,24 @@
     <main>
         <div class="conteudo1">
             <h2 class="texto1">
-                YourHealth é uma empresa preocupada em escolher <br>
-                o melhor caminho para a sua saúde.
+                YourHealth é uma empresa preocupada <br> em escolher
+                o melhor caminho para a sua saúde. <br>
+                Escolhemos o plano de saúde de melhor custo-benefício <br>
+                das melhores operadoras de saúde, com base em seu IMC. <br>
+                Você precisa apenas nos passar algumas informações:
             </h2>
             <div class="labels">
                 <label class="peso">
-                    <input type="text" class="peso" id="peso" name="peso" placeholder="Digite seu peso aqui" required>
+                    <input type="number" class="peso" id="peso" name="peso" placeholder="Digite seu peso (kg)" required>
                 </label>
                 <label class="altura">
-                    <input type="text" class="altura" id="altura" name="altura" placeholder="Digite sua altura aqui" required>
+                    <input type="number" class="altura" id="altura" name="altura" placeholder="Digite sua altura (m)" required>
                 </label>
                 <label>
-                    <button class="botao" type="submit">Calcule agora o seu IMC</button>
+                    <input type="number" class="idade" id="idade" name="idade" placeholder="Digite sua idade" required>
+                </label>
+                <label>
+                    <button class="botao" id="botao" type="submit">Calcule agora o seu IMC</button>
                 </label>
             </div>
         </div>

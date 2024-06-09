@@ -26,7 +26,7 @@ header {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     text-align: center; 
-    font-size: 30px;
+    font-size: 21px;
 }
 
 .labels {
@@ -34,7 +34,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4%;
+    padding: 2%;
 }
 
 .peso {
@@ -43,6 +43,11 @@ header {
 }
 
 .altura {
+    margin-bottom: 4%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.idade {
     margin-bottom: 4%;
     font-family: "Montserrat", sans-serif;
 }
@@ -56,4 +61,6 @@ header {
     border-left: #000080;
     border-top: #000080;
     border-radius: 4%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
