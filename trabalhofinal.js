@@ -44,13 +44,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.scrollTo({top: document.body.scrollHeight, behavior: "smooth" })
 
-    document.getElementById("precoBasicoA").innerHTML = 'R$ ' + precoBasicoAsimplificado;
-    document.getElementById("precoStandardA").innerHTML = 'R$ ' + precoStandardAsimplificado;
-    document.getElementById("precoPremiumA").innerHTML = 'R$ ' + precoPremiumAsimplificado;
+    //document.getElementById("precoBasicoA").innerHTML = 'R$ ' + precoBasicoAsimplificado;
+    //document.getElementById("precoStandardA").innerHTML = 'R$ ' + precoStandardAsimplificado;
+    //document.getElementById("precoPremiumA").innerHTML = 'R$ ' + precoPremiumAsimplificado;
 
-    document.getElementById("precoBasicoB").innerHTML = 'R$ ' + precoBasicoBsimplificado;
-    document.getElementById("precoStandardB").innerHTML = 'R$ ' + precoStandardBsimplificado;
-    document.getElementById("precoPremiumB").innerHTML = 'R$ ' + precoPremiumBsimplificado;
+    //document.getElementById("precoBasicoB").innerHTML = 'R$ ' + precoBasicoBsimplificado;
+    //document.getElementById("precoStandardB").innerHTML = 'R$ ' + precoStandardBsimplificado;
+    //document.getElementById("precoPremiumB").innerHTML = 'R$ ' + precoPremiumBsimplificado;
+
+    document.getElementById("precoBasicoA").innerHTML = precoBasicoA > 0 ? 'R$ ' + precoBasicoAsimplificado : 'A ser ajustado';
+    document.getElementById("precoStandardA").innerHTML = precoStandardA > 0 ? 'R$ ' + precoStandardAsimplificado : 'A ser ajustado';
+    document.getElementById("precoPremiumA").innerHTML = precoPremiumA > 0 ? 'R$ ' + precoPremiumAsimplificado : 'A ser ajustado';
+
+    document.getElementById("precoBasicoB").innerHTML = precoBasicoB > 0 ? 'R$ ' + precoBasicoBsimplificado : 'A ser ajustado';
+    document.getElementById("precoStandardB").innerHTML = precoStandardB > 0 ? 'R$ ' + precoStandardBsimplificado : 'A ser ajustado';
+    document.getElementById("precoPremiumB").innerHTML = precoPremiumB > 0 ? 'R$ ' + precoPremiumBsimplificado : 'A ser ajustado';
+
 
     var precos = [
         { nome: "Plano Básico Operadora A", valor: precoBasicoA },
@@ -59,9 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
         { nome: "Plano Básico Operadora B", valor: precoBasicoB },
         { nome: "Plano Standard Operadora B", valor: precoStandardB },
         { nome: "Plano Premium Operadora B", valor: precoPremiumB }
-    ];
+    ].filter(p => p.valor > 0);
 
-    var planoMaisBarato = precos.reduce((min, p) => p.valor < min.valor ? p : min, precos[0]);
+    //var planoMaisBarato = precos.reduce((min, p) => p.valor < min.valor ? p : min, precos[0]);
+
+    var planoMaisBarato = precos.reduce((min, p) => p.valor < min.valor && p.valor > 0 ? p : min, precos[0]);
 
     // Exibe a mensagem com o plano mais barato
     document.getElementById("mensagemPlanoBarato").textContent = "O melhor plano para você é o " + planoMaisBarato.nome + ", custando R$" + planoMaisBarato.valor.toFixed(2) + ".";
