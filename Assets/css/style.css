@@ -38,18 +38,27 @@ header {
 }
 
 .peso {
-    margin-bottom: 4%;
+    margin-bottom: 1%;
     font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .altura {
-    margin-bottom: 4%;
+    margin-bottom: 1%;
     font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .idade {
-    margin-bottom: 4%;
+    margin-bottom: 1%;
     font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .botao {
@@ -61,8 +70,10 @@ header {
     border-left: #000080;
     border-top: #000080;
     border-radius: 4%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    width: max-content;
+    height: max-content;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .respostatitulo {
@@ -112,6 +123,7 @@ header {
     border-collapse: collapse; /* Remove os espaços entre as bordas das células */
     margin-top: 20px; /* Espaço acima da tabela */
     text-align: center; /* Centraliza o texto nas células */
+    overflow-x: auto;
 }
 
 .tabelaPlanos th, .tabelaPlanos td {
@@ -140,4 +152,15 @@ header {
     text-align: center; 
     font-size: 16px;
     padding-top: 4%;
+}
+
+.botao:hover {
+    background-color: #3c4c8f;
+}
+
+.container {
+    overflow-x: scroll;
+    border-collapse: collapse;
+    max-width: fit-content;
+    min-width: 100%;
 }

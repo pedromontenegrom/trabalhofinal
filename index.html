@@ -10,61 +10,65 @@
     <script src="trabalhofinal.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="tituloheader"> <i class="fa-solid fa-stethoscope" style="color: #ffffff;"></i> YourHealth</h1>
+    <header class="col-sm-12 col-md-12 col-lg-12">
+        <h1 class="tituloheader col-sm-12 col-md-12 col-lg-12"> <i class="fa-solid fa-stethoscope" style="color: #ffffff;"></i> YourHealth</h1>
     </header>
     
     <main>
-        <div class="conteudo1">
-            <h2 class="texto1">
+        <div class="conteudo1 col-sm-12 col-md-12 col-lg-12">
+            <h2 class="texto1 col-sm-12 col-md-12 col-lg-12">
                 YourHealth é uma empresa preocupada <br> em escolher
                 o melhor caminho para a sua saúde. <br>
                 Escolhemos o plano de saúde de melhor custo-benefício <br>
-                das melhores operadoras de saúde, com base em seu IMC. <br>
+                das melhores operadoras de saúde. <br>
                 Você precisa apenas nos passar algumas informações:
             </h2>
-            <div class="labels">
-                <label class="peso">
+            <div class="labels col-sm-12 col-md-12 col-lg-12">
+                <label class="peso col-sm-12 col-md-12 col-lg-12">
                     <input type="number" class="peso" id="peso" name="peso" placeholder="Digite seu peso (kg)" required>
                 </label>
-                <label class="altura">
+                <label class="altura col-sm-12 col-md-12 col-lg-12">
                     <input type="number" class="altura" id="altura" name="altura" placeholder="Digite sua altura (m)" required>
                 </label>
-                <label>
-                    <input type="number" class="idade" id="idade" name="idade" placeholder="Digite sua idade" required>
+                <label class="idade col-sm-12 col-md-12 col-lg-12">
+                    <input type="number" class="idade " id="idade" name="idade" placeholder="Digite sua idade" required>
                 </label>
-                <label>
-                    <button class="botao" id="botao" type="submit">Calcule agora o seu IMC</button>
+                <label class="botao col-sm-12 col-md-12 col-lg-12">
+                    <button class="botao" id="botao" type="submit">Consulte agora seu plano</button>
                 </label>
             </div>
-            <div id="resposta" class="mostraplanos">
-                <h2 class="respostatitulo">Esses são os valores encontrados para você:</h2>
-                <table class="tabelaPlanos">
+            <div id="resposta" class="mostraplanos col-sm-12 col-md-12 col-lg-12">
+                <h2 class="respostatitulo col-sm-12 col-md-12 col-lg-12">Esses são os valores encontrados para você:</h2>
+                <div class="container">
+                <div class="table-container">
+                <table class="tabelaPlanos table-hover">
                     <thead>
-                        <tr>
-                            <th>Tipo de Plano</th>
-                            <th>Operadora A</th>
-                            <th>Operadora B</th>
+                        <tr class="info" >
+                            <th scope="col" >Tipo de Plano</th>
+                            <th scope="col">Operadora A</th>
+                            <th scope="col">Operadora B</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Plano Básico</td>
-                            <td id="precoBasicoA"></td>
-                            <td id="precoBasicoB"></td>
+                            <td data-label="planobasico" >Plano Básico</td>
+                            <td data-label="precobasicoa" id="precoBasicoA"></td>
+                            <td data-label="precobasicob" id="precoBasicoB"></td>
                         </tr>
                         <tr>
-                            <td>Plano Standard</td>
-                            <td id="precoStandardA"></td>
-                            <td id="precoStandardB"></td>
+                            <td data-label="planostandard" >Plano Standard</td>
+                            <td data-label="planostandarda" id="precoStandardA"></td>
+                            <td data-label="precostandardb" id="precoStandardB"></td>
                         </tr>
                         <tr>
-                            <td>Plano Premium</td>
-                            <td id="precoPremiumA"></td>
-                            <td id="precoPremiumB"></td>
+                            <td data-label="planopremium" >Plano Premium</td>
+                            <td data-label="precopremiuma" id="precoPremiumA"></td>
+                            <td data-label="precopremiumb" id="precoPremiumB"></td>
                         </tr>
                     </tbody>
                 </table>
+                </div>
+                </div>
                 <div id="mensagemPlanoBarato" class="mensagem-plano"></div>
             </div>
         </div>
