@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
     //document.getElementById("precoStandardB").innerHTML = 'R$ ' + precoStandardBsimplificado;
     //document.getElementById("precoPremiumB").innerHTML = 'R$ ' + precoPremiumBsimplificado;
 
-    document.getElementById("precoBasicoA").innerHTML = precoBasicoA > 0 ? 'R$ ' + precoBasicoAsimplificado : 'A ser ajustado';
-    document.getElementById("precoStandardA").innerHTML = precoStandardA > 0 ? 'R$ ' + precoStandardAsimplificado : 'A ser ajustado';
-    document.getElementById("precoPremiumA").innerHTML = precoPremiumA > 0 ? 'R$ ' + precoPremiumAsimplificado : 'A ser ajustado';
+    document.getElementById("precoBasicoA").innerHTML = precoBasicoA > 0 ? 'R$ ' + precoBasicoAsimplificado : 'Inválido';
+    document.getElementById("precoStandardA").innerHTML = precoStandardA > 0 ? 'R$ ' + precoStandardAsimplificado : 'Inválido';
+    document.getElementById("precoPremiumA").innerHTML = precoPremiumA > 0 ? 'R$ ' + precoPremiumAsimplificado : 'Inválido';
 
-    document.getElementById("precoBasicoB").innerHTML = precoBasicoB > 0 ? 'R$ ' + precoBasicoBsimplificado : 'A ser ajustado';
-    document.getElementById("precoStandardB").innerHTML = precoStandardB > 0 ? 'R$ ' + precoStandardBsimplificado : 'A ser ajustado';
-    document.getElementById("precoPremiumB").innerHTML = precoPremiumB > 0 ? 'R$ ' + precoPremiumBsimplificado : 'A ser ajustado';
+    document.getElementById("precoBasicoB").innerHTML = precoBasicoB > 0 ? 'R$ ' + precoBasicoBsimplificado : 'Inválido';
+    document.getElementById("precoStandardB").innerHTML = precoStandardB > 0 ? 'R$ ' + precoStandardBsimplificado : 'Inválido';
+    document.getElementById("precoPremiumB").innerHTML = precoPremiumB > 0 ? 'R$ ' + precoPremiumBsimplificado : 'Inválido';
 
 
     var precos = [
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var planoMaisBarato = precos.reduce((min, p) => p.valor < min.valor && p.valor > 0 ? p : min, precos[0]);
 
     // Exibe a mensagem com o plano mais barato
-    document.getElementById("mensagemPlanoBarato").textContent = "O melhor plano para você é o " + planoMaisBarato.nome + ", custando R$" + planoMaisBarato.valor.toFixed(2) + ".";
+    document.getElementById("mensagemPlanoBarato").textContent = "O melhor plano para você é o " + planoMaisBarato.nome + ", custando R$ " + planoMaisBarato.valor.toFixed(2) + ".";
 
     });
 });
