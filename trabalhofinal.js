@@ -34,10 +34,29 @@ document.addEventListener('DOMContentLoaded', function() {
     var precoStandardB = (150 + (fatorComorbidade * 15)) * (imc / 10);
     var precoPremiumB = (200 - (imc * 10) + (fatorComorbidade * 20)) * (imc / 10);
 
-    // Exibe os resultados em uma tabela ou diretamente no console para depuração
-    console.log("Preços da Operadora A: Básico: " + precoBasicoA + ", Standard: " + precoStandardA + ", Premium: " + precoPremiumA);
-    console.log("Preços da Operadora B: Básico: " + precoBasicoB + ", Standard: " + precoStandardB + ", Premium: " + precoPremiumB);
+    var precoBasicoAsimplificado = precoBasicoA.toFixed(2);
+    var precoStandardAsimplificado = precoStandardA.toFixed(2);
+    var precoPremiumAsimplificado = precoPremiumA.toFixed(2);
 
+    var precoBasicoBsimplificado = precoBasicoB.toFixed(2);
+    var precoStandardBsimplificado = precoStandardB.toFixed(2);
+    var precoPremiumBsimplificado = precoPremiumB.toFixed(2);
+
+    document.getElementById("precoBasicoA").innerHTML = precoBasicoAsimplificado;
+    document.getElementById("precoStandardA").innerHTML = precoStandardAsimplificado;
+    document.getElementById("precoPremiumA").innerHTML = precoPremiumAsimplificado;
+
+    document.getElementById("precoBasicoB").innerHTML = precoBasicoBsimplificado;
+    document.getElementById("precoStandardB").innerHTML = precoStandardBsimplificado;
+    document.getElementById("precoPremiumB").innerHTML = precoPremiumBsimplificado;
+
+    //localStorage.setItem('precoBasicoAsimplificado', precoBasicoAsimplificado);
+    //window.location.href = 'resposta.html'
+    // Supondo que os cálculos dos preços já foram realizados e as variáveis já foram definidas conforme você mencionou:
+    // Exibe os resultados em uma tabela ou diretamente no console para depuração
+    //console.log("Preços da Operadora A: Básico: R$ " + precoBasicoAsimplificado + ", Standard: R$ " + precoStandardAsimplificado + ", Premium: R$ " + precoPremiumAsimplificado);
+    //console.log("Preços da Operadora B: Básico: R$ " + precoBasicoBsimplificado + ", Standard: R$ " + precoStandardBsimplificado + ", Premium: R$ " + precoPremiumBsimplificado);
+    
 
     });
 });
