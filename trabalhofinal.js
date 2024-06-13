@@ -42,21 +42,29 @@ document.addEventListener('DOMContentLoaded', function() {
     var precoStandardBsimplificado = precoStandardB.toFixed(2);
     var precoPremiumBsimplificado = precoPremiumB.toFixed(2);
 
-    document.getElementById("precoBasicoA").innerHTML = precoBasicoAsimplificado;
-    document.getElementById("precoStandardA").innerHTML = precoStandardAsimplificado;
-    document.getElementById("precoPremiumA").innerHTML = precoPremiumAsimplificado;
+    window.scrollTo({top: document.body.scrollHeight, behavior: "smooth" })
 
-    document.getElementById("precoBasicoB").innerHTML = precoBasicoBsimplificado;
-    document.getElementById("precoStandardB").innerHTML = precoStandardBsimplificado;
-    document.getElementById("precoPremiumB").innerHTML = precoPremiumBsimplificado;
+    document.getElementById("precoBasicoA").innerHTML = 'R$ ' + precoBasicoAsimplificado;
+    document.getElementById("precoStandardA").innerHTML = 'R$ ' + precoStandardAsimplificado;
+    document.getElementById("precoPremiumA").innerHTML = 'R$ ' + precoPremiumAsimplificado;
 
-    //localStorage.setItem('precoBasicoAsimplificado', precoBasicoAsimplificado);
-    //window.location.href = 'resposta.html'
-    // Supondo que os cálculos dos preços já foram realizados e as variáveis já foram definidas conforme você mencionou:
-    // Exibe os resultados em uma tabela ou diretamente no console para depuração
-    //console.log("Preços da Operadora A: Básico: R$ " + precoBasicoAsimplificado + ", Standard: R$ " + precoStandardAsimplificado + ", Premium: R$ " + precoPremiumAsimplificado);
-    //console.log("Preços da Operadora B: Básico: R$ " + precoBasicoBsimplificado + ", Standard: R$ " + precoStandardBsimplificado + ", Premium: R$ " + precoPremiumBsimplificado);
-    
+    document.getElementById("precoBasicoB").innerHTML = 'R$ ' + precoBasicoBsimplificado;
+    document.getElementById("precoStandardB").innerHTML = 'R$ ' + precoStandardBsimplificado;
+    document.getElementById("precoPremiumB").innerHTML = 'R$ ' + precoPremiumBsimplificado;
+
+    var precos = [
+        { nome: "Plano Básico Operadora A", valor: precoBasicoA },
+        { nome: "Plano Standard Operadora A", valor: precoStandardA },
+        { nome: "Plano Premium Operadora A", valor: precoPremiumA },
+        { nome: "Plano Básico Operadora B", valor: precoBasicoB },
+        { nome: "Plano Standard Operadora B", valor: precoStandardB },
+        { nome: "Plano Premium Operadora B", valor: precoPremiumB }
+    ];
+
+    var planoMaisBarato = precos.reduce((min, p) => p.valor < min.valor ? p : min, precos[0]);
+
+    // Exibe a mensagem com o plano mais barato
+    document.getElementById("mensagemPlanoBarato").textContent = "O melhor plano para você é o " + planoMaisBarato.nome + ", custando R$" + planoMaisBarato.valor.toFixed(2) + ".";
 
     });
 });

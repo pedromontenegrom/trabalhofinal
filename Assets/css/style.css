@@ -106,3 +106,38 @@ header {
     align-items: center;
     flex-direction: column;
 }
+
+.tabelaPlanos {
+    width: 100%; /* Define a largura da tabela para ocupar todo o espaço disponível */
+    border-collapse: collapse; /* Remove os espaços entre as bordas das células */
+    margin-top: 20px; /* Espaço acima da tabela */
+    text-align: center; /* Centraliza o texto nas células */
+}
+
+.tabelaPlanos th, .tabelaPlanos td {
+    border: 1px solid #ddd; /* Adiciona uma borda sólida e leve às células */
+    padding: 8px; /* Espaçamento interno para texto nas células */
+}
+
+.tabelaPlanos th {
+    background-color: #f4f4f4; /* Cor de fundo para o cabeçalho da tabela */
+    color: #333; /* Cor do texto para o cabeçalho */
+    font-weight: bold; /* Torna o texto do cabeçalho em negrito */
+}
+
+.tabelaPlanos tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Cor de fundo para linhas ímpares */
+}
+
+.tabelaPlanos tbody tr:hover {
+    background-color: #e2e2e2; /* Cor de fundo quando o mouse passa sobre uma linha */
+}
+
+.mensagem-plano {
+    color: #000080;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-align: center; 
+    font-size: 16px;
+    padding-top: 4%;
+}

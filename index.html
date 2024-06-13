@@ -39,24 +39,35 @@
             </div>
             <div id="resposta" class="mostraplanos">
                 <h2 class="respostatitulo">Esses são os valores encontrados para você:</h2>
-                <div class="planosconjunto">
-                <div class="planos">
-                    <div class="planonome1"><h2 class="tipoplano">Plano Básico</h2></div>
-                    <div class="operadora"><h3 class="tipooperadora">Operadora A: </h3><div id="precoBasicoA"></div></div>
-                    <div class="operadora"><h3 class="tipooperadora">Operadora B: </h3><div id="precoBasicoB"></div></div>
-                </div>
-                <div class="planos">
-                    <div class="planonome2"><h2 class="tipoplano">Plano Standard</h2></div>
-                    <div class="operadora"><h3 class="tipooperadora">Operadora A: </h3><div id="precoStandardA"></div></div>
-                    <div class="operadora"><h3 class="tipooperadora">Operadora B: </h3><div id="precoStandardB"></div></div>
-                </div>
-                <div class="planos">
-                    <div class="planonome3"><h2 class="tipoplano">Plano Premium</h2></div>
-                    <div class="operadora"><h3 class="tipooperadora">Operadora A: </h3><div id="precoPremiumA"></div></div>
-                    <div class="operadora"><h3 class="tipooperadora">Operadora B: </h3><div id="precoPremiumB"></div></div>
-                </div>
-                </div>
+                <table class="tabelaPlanos">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Plano</th>
+                            <th>Operadora A</th>
+                            <th>Operadora B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Plano Básico</td>
+                            <td id="precoBasicoA"></td>
+                            <td id="precoBasicoB"></td>
+                        </tr>
+                        <tr>
+                            <td>Plano Standard</td>
+                            <td id="precoStandardA"></td>
+                            <td id="precoStandardB"></td>
+                        </tr>
+                        <tr>
+                            <td>Plano Premium</td>
+                            <td id="precoPremiumA"></td>
+                            <td id="precoPremiumB"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="mensagemPlanoBarato" class="mensagem-plano"></div>
             </div>
+        </div>
         </div>
     </main>
     
