@@ -161,6 +161,4 @@ header {
 .container {
     overflow-x: scroll;
     border-collapse: collapse;
-    max-width: fit-content;
-    min-width: 100%;
 }
